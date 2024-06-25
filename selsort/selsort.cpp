@@ -11,7 +11,7 @@ void print(std::vector<unsigned int> list)
     std::cout << std::endl;
 }
 
-unsigned int findmax(std::vector<unsigned int> list, unsigned int limit)
+unsigned int findmax(std::vector<unsigned int>& list, unsigned int limit)
 {
     unsigned int maxi = 0;
     for (unsigned int i = 0; i <= limit; i++)
@@ -40,7 +40,7 @@ std::vector<unsigned int> selsort(std::vector<unsigned int> list)
 int main()
 {
     const std::vector<unsigned int> unsorted_list = {0, 2, 5, 2, 8, 9, 4, 7, 1, 5};
-    const std::vector<unsigned int> sorted_list   = selsort(unsorted_list);
+    const std::vector<unsigned int> sorted_list = selsort(unsorted_list);
     
     print(unsorted_list);
     print(sorted_list);
