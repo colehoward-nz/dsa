@@ -1,6 +1,7 @@
 #include "graph.h"
 #include <iostream>
 
+
 void graph::add_arc(unsigned int x, unsigned int y)
 {
     adj_list[x].push_back(y);
@@ -41,7 +42,6 @@ void graph::bfs_visit(unsigned int source) {
         colour[u] = colours::BLACK;
     }
 }
-
 
 void graph::display()
 {
