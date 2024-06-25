@@ -29,16 +29,15 @@ void graph::bfs_visit(unsigned int source) {
 
     while (!q.empty()) {
         unsigned int u = q.front();
-        for (unsigned int neighbor : adj_list[u]) {
-            if (colour[neighbor] == colours::WHITE) {
-                colour[neighbor] = colours::GREY;
-                pred[neighbor] = u;
-                depth[neighbor] = depth[u] + 1;
-                q.push(neighbor);
+        for (unsigned int neighbour : adj_list[u]) {
+            if (colour[neighbour] == colours::WHITE) {
+                colour[neighbour] = colours::GREY;
+                pred[neighbour] = u;
+                depth[neighbour] = depth[u] + 1;
+                q.push(neighbour);
             }
         }
         q.pop();
-
         colour[u] = colours::BLACK;
     }
 }
